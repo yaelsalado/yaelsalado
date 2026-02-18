@@ -2,4 +2,6 @@
 body{
     background-color: #CFB291;
     color: #574427;
+    border: white solid 10px;
+    padding: 20px;
 }
