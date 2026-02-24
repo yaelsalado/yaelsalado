@@ -10,7 +10,7 @@
     Cosas que conozco sobre la materia
 </h1>
 
-<p>
+<p id="encabezado">
     ya he hecho paginas web usando SVELTE para mostrar datos pero de forma básica y apoyado de IA. Por lo cual me interesa aprender de esto para ser más independiente a la hora de crear mis proyectos y no depender tanto de la IA para cosas básicas. Además, me interesa aprender sobre el desarrollo web para poder crear mis propios proyectos y aplicaciones en el futuro.
 </p>
 
@@ -39,5 +39,37 @@
     }
 </style>
 
+
+<script>
+
+    function triplicar(numero) {
+        return numero * 3;
+    }
+
+    let p={"titulo": "tareas", "autor": "yael salado"};
+    console.log(p);
+    console.log(triplicar(5));
+
+
+    let d=document.createElement("p");
+    d.textContent="hola";
+    document.getElementById("encabezado").appendChild(d);
+    d.setAttribute("style", "color: red");
+
+    async function obtenerJSON() {
+        const respuesta = await fetch("http://openlibrary.org/subjects/love.json");
+        const datos = await respuesta.json();
+        console.log(datos);
+        let libro=datos.works[0].title;
+        console.log(libro);
+        document.getElementById("encabezado").appendChild(document.createTextNode(libro));
+    
+    }
+
+    obtenerJSON();
+
+</script>
+
 </body>
 </html>
+

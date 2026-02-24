@@ -1,0 +1,9 @@
+.preguntas{
+    font-weight: bolder;
+    margin: 3%;
+}
+
+.respuesta{
+    margin-left: 5%;
+    line-height: 2;
+}

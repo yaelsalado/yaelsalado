@@ -6,7 +6,12 @@
 }
 
 .process img{
+    transition: transform 0.3s ease, filter 0.3s ease;
     width: 25%;
     height: auto;
+}
 
+.process img:hover{
+    transform: scale(2.2);
+    filter: drop-shadow(0 0 5px #574427);
 }
