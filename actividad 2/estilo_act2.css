@@ -7,3 +7,10 @@
     margin-left: 5%;
     line-height: 2;
 }
+
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 1px solid black;
+  margin: 30px;
+}
