@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi página con Picnic CSS</title>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+  
+  <style>
+    .flex.demo{
+     margin: .2em 0;
+     background: #2ecc40;
+     text-align: center;
+    }
+    .flex.demo div {
+      border:.1em solid pink;
+    }
+
+  </style>
+</head>
+<body>
+  
+
+  <button id="musico">Ve por mi artista favorito</button>
+  <button id="otro" class="success">Ve por el artista favorito de otro</button>
+  <div class="flex two four-1200 demo">
+    <div id="bio">1</div>
+    <div id="imagen">2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+  
+</div>
+
+
+<div class="tabs two">
+    <input id='tab-1' type='radio' name='tabgroupB' checked />
+    <label class="pseudo button toggle" for="tab-1">Pregunta 1</label>
+    <input id='tab-2' type='radio' name='tabgroupB' checked />
+    <label class="pseudo button toggle" for="tab-2">Pregunta 2</label>
+    
+    <div class="row">
+        <div>
+            <p>
+                No me habia dado cuenta de lo que pasó hasta que familiares me dijeron, pero ese dia me encontaba en casa
+            </p>
+        </div>
+
+        <div>
+            <p>
+             La situación de inseguridad del país y que se dejará de enaltecer figuras que hacen música o peliculas/series que enaltecen al narcotáfico
+            </p>
+        </div>
+
+    </div>
+</div>
+
+    <script>
+    
+    let biografia;
+    let contenedorImagen;
+
+    document.addEventListener("DOMContentLoaded", function() {
+        biografia = document.getElementById("bio");
+        contenedorImagen = document.getElementById("imagen");
+
+        document.getElementById("musico").addEventListener("click", () => obtenerJSON("Harry Styles"));
+        document.getElementById("otro").addEventListener("click", () => obtenerJSON("Adele"));
+        console.log("DOM listo");
+    });
+
+
+     async function obtenerJSON(nombreArtista) {
+       const respuesta = await fetch(`https://www.theaudiodb.com/api/v1/json/123/search.php?s=${encodeURIComponent(nombreArtista)}`);  
+       const datos = await respuesta.json();
+       console.log(datos);
+       const Artista = datos.artists[0];
+
+        const textoArtista = document.createElement('p');
+        textoArtista.textContent = Artista.strBiographyEN; 
+        biografia.appendChild(textoArtista);
+
+        const imagenArtista= document.createElement('img');
+        imagenArtista.src = Artista.strArtistThumb;
+        imagenArtista.width = 300;
+        contenedorImagen.appendChild(imagenArtista);
+     }
+
+
+
+    </script>
+</body>
+</html>
