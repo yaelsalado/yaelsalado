@@ -9,7 +9,7 @@ app.get("/nombre", async (req, res) => {
         res.send("no me diste un nombre de artista");
         return;
     }
-    
+
     const respuesta = await fetch(`https://www.theaudiodb.com/api/v1/json/123/search.php?s=${nombre}`);
     const data = await respuesta.json();
     res.json(data);
@@ -17,5 +17,5 @@ app.get("/nombre", async (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log("Servidor corriendo en puerto 3000");
+    console.log("ingresa el nombre del artista en la url, ejemplo: http://localhost:3000/nombre?nombre=Coldplay");
 });
