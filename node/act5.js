@@ -3,8 +3,7 @@ import http from "http";
 //fs nos sirve para leer y escribir archivos
 import fs from "fs";
 
-//Esta función deberá mostrar una página HTML
-//con la bienvenida a tu proyecto
+//Esta función deberá mostrar una página HTML de bienvenida
 
 function darBienvenida(req, res) {
     fs.readFile("bienvenida.html", "utf8", (error, data) => {
@@ -50,18 +49,6 @@ function mostrarPerfil(req, res) {
         res.writeHead(200, { "Content-Type": "text/html" });
         res.end(data);
     });
-}
-
-function mostrarMascotas(req, res) {
-    fs.readFile("mascotas.html", "utf8", (error, data) => {
-        if (error) {
-            res.writeHead(500, { "Content-Type": "text/plain" })
-            res.end("Oh no!!!!")
-            return
-        }
-        res.writeHead(200, { "Content-Type": "text/html" })
-        res.end(data)
-    })
 }
 
 function mostrarAdoptantes(req, res) {
