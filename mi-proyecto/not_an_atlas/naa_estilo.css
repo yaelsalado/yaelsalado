@@ -1,0 +1,187 @@
+body {
+  padding: 0;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.nombre_pag {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #111111;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0 30px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.contenido {
+  padding: 50px;
+  line-height: 2;
+}
+
+.imagenes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.imagenes img {
+  width: 375px;
+  height: auto;
+}
+
+.piePag {
+    background-color: lightgrey;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;justify-content: center;
+
+}
+
+.redes img{
+    width: 25px;
+    height: auto;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width: 600px;
+    height: auto;
+}
+
+body {
+  padding: 0;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.nombre_pag {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #111111;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0 30px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.contenido {
+  padding: 50px;
+  line-height: 2;
+}
+
+.imagenes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.imagenes img {
+  width: 375px;
+  height: auto;
+}
+
+.piePag {
+    background-color: lightgrey;
+    padding: 50px;
+
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+}
+
+.piePag .redes{
+    justify-content: left;
+}
+
+.piePag .redes img{
+    width: 40px;
+    height: auto;
+}
+
+.findUs{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.newsletter{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mail input {
+    padding: 10px 15px;
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.subscribe {
+    padding: 10px 20px;
+    background-color: rgb(69, 69, 197);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.subscribe:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}

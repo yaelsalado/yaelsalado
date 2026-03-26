@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <title>CLASE</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<h1>
+    Cosas que conozco sobre la materia
+</h1>
+
+<p id="encabezado">
+    ya he hecho paginas web usando SVELTE para mostrar datos pero de forma básica y apoyado de IA. Por lo cual me interesa aprender de esto para ser más independiente a la hora de crear mis proyectos y no depender tanto de la IA para cosas básicas. Además, me interesa aprender sobre el desarrollo web para poder crear mis propios proyectos y aplicaciones en el futuro.
+</p>
+
+<H1> 
+    OTROS ALUMNOS
+</H1>
+
+<a href="https://11rls11.github.io/11rls11_tc2005b_web_module_class1/">
+    Ir a la página de otro alumno
+</a>
+
+<H1>
+    TAREAS:
+
+</H1>
+
+<a href="https://yaelsalado.github.io/yaelsalado/proceso/creation.html">
+    tarea 1: Copia de una página web
+</a>
+<br><br>
+<a href="https://yaelsalado.github.io/yaelsalado/actividad 2/actividad2.html">
+    tarea 2: Responder preguntas y usar un framework
+</a>
+<br><br>
+<a href="https://yaelsalado.github.io/yaelsalado/act_frame_work/picnic.html">
+    tarea 3: Usar picnic CSS
+</a>
+
+<style>
+    h1{
+        border: 10px solid lightgray;
+        width: 300px;
+        margin: 30px;
+    }
+</style>
+
+
+<script>
+
+    function triplicar(numero) {
+        return numero * 3;
+    }
+
+    let p={"titulo": "tareas", "autor": "yael salado"};
+    console.log(p);
+    console.log(triplicar(5));
+
+
+    let d=document.createElement("p");
+    d.textContent="hola";
+    document.getElementById("encabezado").appendChild(d);
+    d.setAttribute("style", "color: red");
+
+    async function obtenerJSON() {
+        const respuesta = await fetch("http://openlibrary.org/subjects/love.json");
+        const datos = await respuesta.json();
+        console.log(datos);
+        let libro=datos.works[0].title;
+        console.log(libro);
+        document.getElementById("encabezado").appendChild(document.createTextNode(libro));
+    
+    }
+
+    obtenerJSON();
+
+</script>
+
+</body>
+</html>
+
