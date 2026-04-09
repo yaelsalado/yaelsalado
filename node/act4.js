@@ -1,5 +1,4 @@
 import express from "express";
-
 const app = express();
 
 app.get("/nombre", async (req, res) => {
